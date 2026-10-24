@@ -1,0 +1,41 @@
+[project]
+name = "russell"
+version="0.1.31"
+description = "A short, clear description of what the russell package does"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" } # Change to your preferred license (e.g., Apache-2.0, GPL-3.0)
+keywords = ["utility", "helper"] # Add search keywords for PyPI discovery
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+authors = [
+    { name = "Your Name", email = "you@example.com" }
+]
+dependencies = [
+    # Packages your users will automatically install when they download 'russell'
+    # "requests>=2.31.0",
+]
+
+[project.urls]
+Homepage = "https://github.com"
+Repository = "https://github.com"
+Documentation = "https://github.com#readme"
+
+[tool.poetry]
+# Keep package-mode enabled (default) for PyPI libraries
+package-mode = true
+
+[tool.poetry.group.dev.dependencies]
+# Tools you need during development but shouldn't bundle for your users
+pytest = "^8.0.0"
+twine = "^5.0.0"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+

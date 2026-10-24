@@ -1,0 +1,6 @@
+import logging
+
+def setup_logger(module_name: str = ..., level: int = ...) -> logging.Logger: ...
+
+class InPlaceStreamHandler(logging.StreamHandler):
+    def emit(self, record: logging.LogRecord) -> None: ...
