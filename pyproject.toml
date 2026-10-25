@@ -1,6 +1,6 @@
 [project]
 name = "russell"
-version="0.1.31"
+version="0.0.8"
 description = "A short, clear description of what the russell package does"
 readme = "README.md"
 requires-python = ">=3.12"
@@ -37,5 +37,4 @@ twine = "^5.0.0"
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
-
 

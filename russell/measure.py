@@ -2,10 +2,13 @@ import time
 from enum import Enum
 from typing import Any
 
+type MeasureDict = dict[Enum, MeasuredTime]
+type Measurements = dict[Enum, float]
+
 
 class Measure:
     def __init__(self):
-        self._times: dict[Enum, MeasuredTime] = {}
+        self._times: MeasureDict = {}
 
     def start(self, category: Enum) -> None:
         self._times[category] = MeasuredTime(start=time.perf_counter())
@@ -15,8 +18,8 @@ class Measure:
             raise ValueError(f"Stop timing for OCR without having started. Category: {category}")
         self._times[category].stop = time.perf_counter()
 
-    def get_timings(self) -> dict[Enum, float]:
-        timings: dict[Enum, float] = {}
+    def get_timings(self) -> Measurements:
+        timings: Measurements = {}
         for category, timing in self._times.items():
             timings.update({category: timing.duration})
         return timings

@@ -3,7 +3,7 @@ from enum import Enum, IntEnum, StrEnum
 import pytest
 
 from russell.common import setup_logger
-from russell.utilities.utilities import Bounds, get_enum_bounds, get_type_bounds
+from russell.utilities import Bounds, get_enum_bounds, get_type_bounds
 
 __logger = setup_logger(__name__)
 
