@@ -1,8 +1,9 @@
 import time
+from collections.abc import Callable, Generator
 from contextlib import contextmanager
 from enum import Enum
 from functools import wraps
-from typing import Any, Callable, Generator, ParamSpec, TypeVar
+from typing import Any, ParamSpec, TypeVar
 
 type MeasureDict = dict[Enum, MeasuredTime]
 type Measurements = dict[Enum, float]
